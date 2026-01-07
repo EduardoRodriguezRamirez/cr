@@ -56,3 +56,42 @@ document.addEventListener("click", function(event){
     
     
 });
+
+const rows = document.querySelectorAll("tr");
+const tds = document.createElement("td");
+
+rows.forEach(row => {
+    row.addEventListener("dblclick", () => {
+        if (row.querySelector("td") !== null) {
+            const tds = row.getElementsByTagName("td");
+            const ths = document.querySelectorAll("th");
+
+            var ths_array = Array.from(ths)
+            var tds_array = Array.from(tds)
+
+            var info_selected = document.getElementById("info-selected");
+
+            info_selected.innerHTML = "";
+            
+            for (let i = 0; i < tds.length; i++) {
+
+                var header = ths_array[i].textContent.trim();
+                var data = tds_array[i].textContent.trim();
+                var information = document.createElement("div");
+                
+
+
+
+                information.setAttribute("class", "w-info-s");
+                information.innerHTML = `
+        <label for="`+ header +`" class="lbl-inf">`+ header +`</label>
+        <div class="text-input">
+            <input type="text" class="input-reset input-custom" id="`+ header +`" value="`+ data +`" />
+            <img src="Resource/copia.png" class="icon" />
+        </div>
+`;              
+                info_selected.appendChild(information);
+        }
+        }
+    });
+});
