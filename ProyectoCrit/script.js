@@ -27,11 +27,13 @@ const exit_colab = document.getElementById("salir-colab")
 const add_colab = document.getElementById("add-colab")
 
 function close_colab(){
-    add_colab.classList.add("cerrado")
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("add-colab").style.display = "none";
 }
 
 function open_colab(){
-    add_colab.classList.remove("cerrado")
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("add-colab").style.display = "block";
 }
 
 

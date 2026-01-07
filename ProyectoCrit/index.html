@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>  
+    <div class="overlay" id="overlay"></div>
+    
     <div class="container" id="container">
         <div class="top">
             <div class="logo-div">
@@ -15,6 +17,7 @@
             <div class="nav">
                 <img src="Resource/table.png" alt="" class="icon-b">
                 <img src="Resource/map.png" alt="" class="icon-b">
+                <img src="Resource/calendario.png" alt="" class="icon-b">
             </div>
             <div class="user-div">
                 <img src="Resource/gato.jpg" alt="" class="user icon-b">
@@ -24,7 +27,7 @@
             <div class="bar-list">
                             <div class="search">
                 <input type="text" placeholder="Buscar..." id="search"></input>    
-                <select name="" id="filter">
+                <select name="select-table" id="select-table" class="filter">
                     <option value="">Colaboradores</option>
                     <option value="">Equipos</option>
                     <option value="">Bajas</option>
@@ -124,7 +127,8 @@
             <img src="Resource/salir.png" alt="" class="icon" id="salir-colab">
         </div>
         <h2 id="form">Colaboradores</h2 >
-        <form action="" id="form-colab">
+            <div id="div-form">
+                <form action="" id="form-colab">
             <div class="personal">
                 <div class="nomina">
                     <label for="num-nom">Numero de nomina</label>
@@ -191,7 +195,62 @@
                     <input type="password" name="pass-s" id="pass-s" class="largo input-reset input-custom">
                 </div>
             </div>
-        </form>
+                </form>
+                <form action="" id="form-equipos">
+                    <div class="icono-mas-equipos">
+                        <img src="Resource/mas.png" alt="" class="m">
+                        <h4>Agregar equipo</h4>
+                    </div>
+                    <div class="equipos-f">
+                        <div class="Hostname">
+                            <label for="hostname">Hostname</label>
+                            <input type="text" name="hostname" id="hostname" class="medio input-reset input-custom">
+                        </div>
+                        <div class="ip">
+                            <label for="num-nom">IP</label>
+                            <input type="number" name="ip" id="ip" class="medio input-reset input-custom">
+                        </div>
+                        <div class="mac">
+                            <label for="num-nom">MAC</label>
+                            <input type="text" name="mac" id="mac" class="medio input-reset input-custom">
+                        </div>
+                    </div>
+                </form>
+                <form action="" id="form-conexiones">
+                    <div class="icono-mas-conexiones">
+                        <img src="Resource/mas.png" alt="" class="m">
+                        <h4>Agregar conexion</h4>
+                    </div>
+                    <div class="conexiones-f">
+                        <div class="df-f">
+                            <label for="select-df">Selecciona el DF al que se conecta</label>
+                            <select name="select-df" id="select-df" class="filter">
+                                <option value="mdf">Main Frame</option>
+                                <option value="terapias">Terapias</option>
+                                <option value="aulas">Aulas</option>
+                                <option value="valoracion">Valoracion</option>
+                            </select>
+                        </div>  
+                        <div class="switch-f">
+                            <label for="nm-switch">Numero de Switch</label>
+                            <input type="number" name="nm-switch" id="nm-switch" class="medio input-reset input-custom">
+                        </div>
+                        <div class="puerto-f">
+                            <label for="nm-puerto">Numero de puerto</label>
+                            <input type="number" name="nm-puerto" id="nm-puerto" class="medio input-reset input-custom">
+                        </div>
+                        <div class="patch-f">
+                            <label for="nm-patch">Numero de patch</label>
+                            <input type="number" name="nm-patch" id="nm-patch" class="medio input-reset input-custom">
+                        </div>
+                        <div class="tipoD-f">
+                            <label for="nm-tipoD">Tipo de dato</label>
+                            <input type="text" name="nm-tipoD" id="nm-tipoD" class="medio input-reset input-custom">
+                        </div>
+                    </div>
+                </form>
+    </div>
+        
     </div>
 <script src="script.js"></script>
 </body>
