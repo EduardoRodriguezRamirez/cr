@@ -6,8 +6,8 @@
     <title>Datos</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
+<body>  
+    <div class="container" id="container">
         <div class="top">
             <div class="logo-div">
                 <img src="Resource/teleton.jfif" alt="" class="icon-b">
@@ -38,11 +38,26 @@
             <div class="table">
                 <table>
                     <tr>
-                        <th tabindex="0">ID</th>
-                        <th tabindex="0">Nombre</th>
-                        <th tabindex="0">Puesto</th>
-                        <th tabindex="0">Departamento</th>
-                        <th tabindex="0">Correo</th>
+                        <th tabindex="0">
+                            ID
+                            <img src="Resource/salir.png" alt="" class="table-quit ">
+                        </th>
+                        <th tabindex="0">
+                            Nombre
+                            <img src="Resource/salir.png" alt="" class="table-quit ">
+                        </th>
+                        <th tabindex="0">
+                            Puesto
+                            <img src="Resource/salir.png" alt="" class="table-quit ">
+                        </th>
+                        <th tabindex="0">
+                            Departamento
+                            <img src="Resource/salir.png" alt="" class="table-quit ">
+                        </th>
+                        <th tabindex="0">
+                            Correo
+                            <img src="Resource/salir.png" alt="" class="table-quit ">
+                        </th>
                     <tr tabindex="0">
                         <td  >1234</td>
                         <td>Perez Juan</td>
@@ -53,11 +68,11 @@
                 </table>
             </div>
         </div>
-        <div class="lateral-w">
+        <div class="lateral-w" id="lateral-w">
             <div>
                 <div class="w-top selected">
                     <div class="w-exit">
-                        <img src="Resource/flecha.png" alt="" class="icon">
+                        <img src="Resource/flecha.png" alt="" id="lateral-exit" class="icon">
                     </div>
                     <div class="w-title">
                         <label for="">Colaboradores</label>
@@ -123,6 +138,80 @@
             </div>
         </div> 
     </div>
-
+    <div class="add-colab" id="add-colab">
+        <div class="colab-salir" id="colab_salir">
+            <img src="Resource/salir.png" alt="" class="icon" id="salir-colab">
+        </div>
+        <h2 id="form">Colaboradores</h2 >
+        <form action="" id="form-colab">
+            <div class="personal">
+                <div class="nomina">
+                    <label for="num-nom">Numero de nomina</label>
+                    <input type="number" name="num-nom" id="num-nom" class="medio input-reset input-custom">
+                </div>
+                <div class="nombre">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" name="name" id="name" class="largo input-reset input-custom">
+                </div>
+                <div class="nivel">
+                    <label for="level">Nivel</label>
+                    <input type="text" name="level" id="level" class="largo input-reset input-custom"/>
+                </div>
+                <div class="puesto">
+                    <label for="puesto">Puesto</label>
+                    <input type="text" name="puesto" id="puesto" class="largo input-reset input-custom">
+                </div>
+                <div class="extension">
+                    <label for="extension">Extension</label>
+                    <input type="number" name="extension" id="extension" class="medio input-reset input-custom">
+                </div>
+            </div>        
+            <div class="locacion">
+                <div class="number-c">
+                    <label for="num-cub">Numero de cubiculo</label>
+                    <input type="number" name="num-cub" id="num-cub" class="medio input-reset input-custom">
+                </div>
+                <div class="name-c">
+                    <label for="nom-cub">Nombre de cubiculo</label>
+                    <input type="text" name="nom-cub" id="nom-cub" class="largo input-reset input-custom">
+                </div>
+                <div class="pasillo">
+                    <label for="pasillo">Pasillo</label>
+                    <input type="text" name="pasillo" id="pasillo" class="largo input-reset input-custom">
+                </div>
+                <div class="area">
+                    <label for="area">Área</label>
+                    <input type="text" name="area" id="area" class="largo input-reset input-custom">
+                </div>
+            </div>       
+            <div class="correos">
+                <div class="correo">
+                    <label for="correo">Correo</label>
+                    <input type="text" name="correo" id="correo" class="largo input-reset input-custom">
+                </div>
+                <div class="pass-c">
+                    <label for="pass-c">Contraseña</label>
+                    <input type="password" name="pass-c" id="pass-c" class="largo input-reset input-custom">
+                </div>
+                <div class="parallels">
+                    <label for="parallels">Parallels</label>
+                    <input type="text" name="parallels" id="parallels" class="largo input-reset input-custom">
+                </div>
+                <div class="pass-p">
+                    <label for="pass-p">Contraseña</label>
+                    <input type="password" name="pass-p" id="pass-p" class="largo input-reset input-custom">
+                </div> 
+                <div class="scrit">
+                    <label for="scrit">Scrit</label>
+                    <input type="text" name="scrit" id="scrit" class="largo input-reset input-custom">
+                </div> 
+                <div class="pass-s">
+                    <label for="pass-s">Contraseña</label>
+                    <input type="password" name="pass-s" id="pass-s" class="largo input-reset input-custom">
+                </div>
+            </div>
+        </form>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
