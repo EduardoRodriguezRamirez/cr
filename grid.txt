@@ -1,0 +1,9 @@
+grid-auto-row: 50px
+Cada fila que se genere sera de 50px
+
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+
+auto-fit es otro atributo que puedes usar
+
+max-width:800px
+Restringir el tamano del contenedor a 800 para que solo entren 4 columnas
