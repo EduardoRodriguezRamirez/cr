@@ -8,6 +8,7 @@
     --very-light-gray: rgb(248, 248, 248); /* Very light gray color variable */ 
     --very-dark-gray: rgb(92, 92, 92); /* Very dark gray color variable */ 
     --blur-gray: rgba(223, 223, 223, 0.1);
+    --blur-very-light-gray:  rgba(248, 248, 248, 0.753);
 }
 .top{
     background-color: none;
@@ -22,8 +23,8 @@
     display: grid;  
     height: auto;
     width: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr; 
+    grid-template-columns: repeat(3, minmax(200px, 30%));
+    grid-template-rows: 1fr 1fr ; 
     grid-template-areas: 
     "aula1 aula2 aula3"
     "aula4 aula5 aula6";
@@ -34,45 +35,39 @@
     gap: 5vh 5vw; 
     padding: 10vh;
     overflow-y: auto;
-    box-sizing: border-box;
+}
+
+.list > *{
+    min-width: 0;
 }
 #aula1{
     grid-area: aula1;
-    box-sizing: border-box;
 }
 #aula2{
      grid-area: aula2;
-     box-sizing: border-box;
 }
 #aula3{
      grid-area: aula3;
-     box-sizing: border-box;
 }
 #aula4{
      grid-area: aula4;
-     box-sizing: border-box;
 }
 #aula5{
      grid-area: aula5;
-     box-sizing: border-box;
 }
 #aula6{
      grid-area: aula6;
-     box-sizing: border-box;
 }
 
 .image{
     background-color: aqua;
-    width: 80%;
-    height: 80%;
-    scale: 1/1;
-    outline: 5px solid var(--light-gray);
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--light-gray);
     border-radius: 15px;
-    box-sizing: border-box;
 }
-.image:hover{
+.aula:hover .image{
     box-shadow: 0 0 50px 20px rgb(101, 226, 84);
-    cursor: pointer;
     transition: box-shadow 0.3s ease;
 }
 
@@ -120,6 +115,58 @@ html, body {
     grid-template-areas: 
     "header" 
     "list";
-    box-sizing: border-box;
 }
 
+.etiqueta{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+    color: rgb(0, 0, 0);
+    background-color: var(--blur-very-light-gray);
+    opacity: 0;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+.aula{
+    position: relative;
+}
+
+.aula:hover .etiqueta{
+        display:block;
+        opacity: 1;   
+        transition: opacity 0.8s ease; 
+}
+
+.small{
+    width: 10%;
+    height: auto;
+    min-width: 25px;
+    min-height: auto;
+    scale: 1/1;
+    transition: scale 0.2s ease;
+}
+.bar-conf-aula{
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+    opacity: 0;
+    
+}
+
+.small:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.aula:hover .bar-conf-aula{
+        opacity: 1;   
+        transition: opacity 0.8s ease; 
+}
