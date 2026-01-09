@@ -18,56 +18,101 @@
     align-content: center;
     border-bottom: 2px solid var(--light-gray);
 }
-.list{
-    grid-area: list;
-    display: grid;  
-    height: auto;
-    width: auto;
-    grid-template-columns: repeat(3, minmax(200px, 30%));
-    grid-template-rows: 1fr 1fr ; 
-    grid-template-areas: 
-    "aula1 aula2 aula3"
-    "aula4 aula5 aula6";
-    justify-self: center;
-    align-self: center;
-    justify-items: center;
-    align-items: center;
-    gap: 5vh 5vw; 
-    padding: 10vh;
-    overflow-y: auto;
+.imagen{
+    position: relative;
+    background-color: var(--black);
+    border-radius: 15px;
+
+
 }
 
-.list > *{
-    min-width: 0;
+.imagen.abierto{
+   
 }
+
+
+.list{
+    display: grid;  
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 2vw;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.content{
+    max-width: 100%;
+    justify-self: center;
+    align-self: flex-start;
+}
+
 #aula1{
-    grid-area: aula1;
 }
+
+.carta{
+    position: absolute;
+    top: 45%;
+    transition: height 0.5s ease;
+    transition: opacity 1s ease;
+    transform-origin: top;
+    height: 0%;
+    z-index: -1;
+    border-radius: 15px 15px 15px 15px;
+}
+.elementos > *{
+    opacity: 0;
+    margin: auto;
+    
+}
+.elementos{
+   
+}
+.tarjeta.abierta{
+    grid-row: span 2;
+    background-color: var(--white);
+    z-index: 2;
+    .image{
+        border-radius: 15px 15px 0 0 ;
+    }
+    .carta{
+        background-color: var(--very-light-gray);
+        width: 100%;
+        height: 50%;   
+        outline: 5px solid var(--light-gray);
+    }
+    .elementos > *{
+        opacity: 1;
+        transition: opacity .7s ease;
+    }
+}
+
 #aula2{
-     grid-area: aula2;
+     
 }
 #aula3{
-     grid-area: aula3;
+     
 }
 #aula4{
-     grid-area: aula4;
+     
 }
 #aula5{
-     grid-area: aula5;
+     
 }
 #aula6{
-     grid-area: aula6;
+
 }
 
 .image{
     background-color: aqua;
+    outline: 5px solid var(--light-gray);
     width: 100%;
-    height: 100%;
-    border: 5px solid var(--light-gray);
     border-radius: 15px;
+    box-sizing: border-box;
 }
+
 .aula:hover .image{
-    box-shadow: 0 0 50px 20px rgb(101, 226, 84);
+    box-shadow: 0 0 15px 5px rgb(101, 226, 84);
     transition: box-shadow 0.3s ease;
 }
 
@@ -133,6 +178,7 @@ html, body {
 }
 
 .aula{
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     position: relative;
 }
 

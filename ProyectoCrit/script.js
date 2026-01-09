@@ -97,3 +97,13 @@ rows.forEach(row => {
         }
     });
 });
+
+const btn_calendario = document.getElementsByClassName("calendario")
+const btn_descripcion = document.getElementsByClassName("descripcion")
+
+btn_calendario.forEach(btn => {
+    btn.addEventListener("click", () => {
+        var parent = btn.parentElement.parentElement.parentElement;
+        parent.classList.add("abierto")
+    });
+});
