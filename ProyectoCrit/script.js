@@ -48,15 +48,12 @@ btn_add_colab.addEventListener("click", () => {
 });
 
 document.addEventListener("click", function(event){
-    console.log(add_colab.classList.contains("cerrado"))
     if(!btn_add_colab.contains(event.target)){
         if(!add_colab.contains(event.target) && !add_colab.classList.contains("cerrado")){
             add_colab.classList.add("cerrado")
         console.log("entro")
     }
     }
-    
-    
 });
 
 const rows = document.querySelectorAll("tr");
