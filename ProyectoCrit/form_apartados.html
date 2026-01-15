@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>  
+    <div class="container" id="container">
+        <div class="top">
+            <div class="logo-div">
+                <img src="Resource/teleton.jfif" alt="" class="icon-b">
+            </div>
+            <div class="nav">
+                <img src="Resource/table.png" alt="" class="icon-b">
+                <img src="Resource/map.png" alt="" class="icon-b">
+                <img src="Resource/calendario.png" alt="" class="icon-b">
+            </div>
+            <div class="user-div">
+                <img src="Resource/gato.jpg" alt="" class="user icon-b">
+            </div>
+        </div>
+        <div class="content">
+            <h1>Tal nombre de aulas</h1>
+            <form action="">
+                <section class="select-aulas">
+                    <p>Seleccion las aulas que requerira</p>
+                    <div class="aulas apartado">
+                        <div class="aula" id="aula-1">1</div>
+                        <div class="aula" id="aula-2">2</div>
+                        <div class="aula" id="aula-3">3</div>
+                        <div class="aula" id="aula-4">4</div>
+                    </div>
+                </section>
+                <section class="select-fecha">
+                    <div>
+                        <label for="fecha">Ingrese la fecha</label>
+                        <input type="date" class="apartado" name="fecha" id="fecha">
+                    </div>
+                    <div>
+                        <label for="fecha">Ingrese la hora</label>
+                        <input type="time" class="apartado" name="hora" id="hora">
+                    </div>
+                </section>
+                <section class="nombre">
+                    <label for="name">Ingrese su nombre</label>
+                    <input type="text" class="apartado" name="name">
+                </section>
+                <section class="ayudas-ext">
+                    <label for="TI">Solicitar ayuda TI</label>
+                    <div class="checkbox">
+                        <div></div>
+                    </div>
+                    <label for="otra">Solicitar otra ayuda</label>
+                    <div class="checkbox">
+                        <div></div>
+                    </div>
+                </section>
+                <section class="descripcion">
+                    <label for="descripcion">Describa la razon del apartado</label>
+                    <textarea name="descripcion" class="apartado" id="descripcion">
+
+                    </textarea>
+                </section>
+                <div id="btn-apart">
+                    <p>Apartar</p>
+                </div>
+            </form>
+        </div>
+        <script src="script3.js"></script>
+
+    </div>
+</body>
+</html>
